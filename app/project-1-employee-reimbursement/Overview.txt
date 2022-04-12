@@ -1,0 +1,20 @@
+Name: Project 0 (Reimbursement System)
+
+Description: Employees can submit requests for reimbursements and see the status of their pending requests. Finance managers
+	can view all reimbursement requests and approve/deny requests.
+
+Endpoints:
+	All:
+		POST /login
+	Employees:
+		GET /user/{user_id}/tickets
+		GET /user/{user_id}/tickets/{reimb_id}
+		POST /user/{user_id}/tickets
+		PATCH /user/{user_id}/tickets/{reimb_id}
+		DELETE /user/{user_id}/tickets/{reimb_id}
+	Managers:
+		GET /employees
+			GET /employees?department=""
+		GET /employees/{user_ud}/tickets
+			GET /employees/{user_id}/tickets?status=""
+		PATCH /employees/{user_id}/tickets/{reimb_id}
